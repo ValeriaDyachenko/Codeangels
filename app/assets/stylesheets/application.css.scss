@@ -1,0 +1,27 @@
+@import "compass";
+@import "foundation-grid";
+@import "fonts";
+
+$background: #a0ddf3;
+$violet: #9189ff;
+$orange: #e05d41;
+$olive: #7aa700;
+$purple: #7500a7;
+$azure: #0cf389;
+
+$base-font-size: 14px;
+$base-line-height: 20px;
+
+$apply-font-size: 22px;
+$footer-font-size: 25px;
+$title-font-size: 40px;
+$content-font-size: 19px;
+
+
+
+@include global-reset;
+@include establish-baseline;
+
+@import "layouts";
+@import "modules/*";
+

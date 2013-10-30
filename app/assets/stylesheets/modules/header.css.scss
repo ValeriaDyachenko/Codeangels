@@ -1,0 +1,52 @@
+#header{
+@include outerRow;
+  #logo_big{
+    .img {
+      background-image: image-url("logo_big.png");
+      @include margin-trailer(3); 
+      @include margin-leader(2);
+      @include column(4,center); 
+      background-repeat: no-repeat;
+      height: 206px;
+    }
+  }
+  #title{
+    color: black;
+    font-size: 40px; 
+    font-family: 'Raleway1';
+    text-align:center;
+  }
+  #groupe{
+    @include outerRow;
+    @include margin-leader(4);
+    @include margin-trailer(6); 
+    border-bottom: 3px $olive solid; 
+    .img{
+      @include column(8);
+      background-image: image-url("foto1.png");
+      background-repeat: no-repeat;
+      height: 441px;
+      background-size: 100%;
+    }
+    &:hover {
+     .img{  
+        background-image: image-url("foto2.png");
+        background-repeat: no-repeat;
+        height: 441px;
+        background-size: 100%;
+      }
+    }   
+    .text{
+      @include column(4);
+      background: $orange;
+      color: white;
+      height: 441px;
+      font-family: 'Raleway1';      
+      font-size:21px;
+      line-height: 1.3;
+      padding-right: 40px;
+      padding-left: 12px;
+      @include padding-leader(0.4);          
+    }
+  }
+}

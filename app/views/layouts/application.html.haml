@@ -1,0 +1,25 @@
+!!!
+%html
+%head
+  %title= "CodeAngels"
+
+  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = csrf_meta_tags
+%body
+  %header
+    .wrapper
+      #small-logo
+        .img
+      #menu
+        %nav
+          %a{href: "#"}="Home"
+          %a{href: "#"}="Ruby/RoR Course"
+          %a{href: "#"}="JS Course"
+          %a{href: "#"}="Coaches"
+  
+  #content
+    = yield
+  %footer
+    #contact= "contact:info@rubygarage.org"
+    #RG= "© 2011-2013 RubyGarage"

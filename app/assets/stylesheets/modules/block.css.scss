@@ -1,0 +1,52 @@
+@mixin block($color) {
+  width: 100px;
+  height: 100px;
+  background-color: $color;
+  position: absolute;
+}
+
+.block_left {
+  @include block($orange);
+  left: -104px;
+  bottom: 0px;
+}
+
+.block_right_top {
+  @include block($orange);
+  right: -104px;
+  top: 0px;
+}
+.block_right_top_buttom{
+  @include block($orange);
+  right: -104px;
+  top: 104px;
+}
+.block_right_top_right {
+  @include block(#cd8376);
+  right: -208px;
+  top: 0px;
+}
+
+.block_left_buttom {
+  @include block($orange);
+  left: -104px;
+  bottom: -104px;
+}
+
+.block_left_buttom_right {
+  @include block($orange);
+  left: 0px;
+  bottom: -104px;
+}
+
+.block_right_top_olive{
+  @include block($olive);
+  bottom: 0px;
+  left: 482px;
+}
+
+.block_right_top_buttom_olive{
+  @include block($olive);
+  left: 482px;
+  bottom: 104px;
+}

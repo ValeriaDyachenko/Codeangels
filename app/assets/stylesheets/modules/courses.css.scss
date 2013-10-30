@@ -1,0 +1,184 @@
+#course{   
+  @include outerRow;
+  .line {
+    margin-left: -120px;
+    border-bottom: 2px $orange solid; 
+    width: 125%;
+    margin-bottom: -35px;
+  }  
+  .title{
+    @include adjust-font-size-to($title-font-size);     
+    text-align: center;
+    color: $orange;
+    field {
+      background-color: $background;
+    }
+  }
+  .content{
+    @include outerRow;
+    @include margin-leader(2);
+    @include margin-trailer(4);
+    @include adjust-font-size-to($content-font-size);  
+    line-height:1.4em;
+    .left{
+      @include column(6);
+      .text{
+        @include padding-leader;
+        @include padding-trailer;
+        padding-left: 44px;
+        padding-right: 50px;
+        background-color: $olive;
+        border-bottom: 3px $orange solid;
+        color: black;
+        font-family: "Raleway2";
+        border-bottom: 3px $orange solid; 
+      }
+      .apply_request{
+        @include padding-leader;
+        background-color: $purple;
+        border-bottom: 3px $azure solid;
+        color: white;
+        margin-top: 4px;
+        .apply_text{
+          font-family: "Raleway3";
+          @include adjust-font-size-to($apply-font-size);  
+          text-align: left;
+          padding-left: 40px;
+        }
+        .apply{
+          height: 135px;
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 180px;
+            line-height: 0.5em;
+            display: block;
+            text-align: center;
+          }
+        }
+        table{ 
+          @include margin-leader;
+          .text_lable{
+            padding-left: 40px;
+            @include adjust-font-size-to($apply-font-size);  
+            font-family: "Raleway2";
+          }
+          .field{
+            @include padding-leader(0.5);
+            @include padding-trailer(0.5);
+            @include margin-trailer;
+            border: none;
+            margin-left: 30px;
+            width: 240px; 
+          }
+          .city{padding-left: 30px;}
+          button{ 
+            @include margin-leader(0.3);
+            @include margin-trailer;
+            border: none;
+            background-color: $azure;
+            float: right;
+            color: $purple;
+            @include adjust-font-size-to($apply-font-size);  
+            width: 125px;
+            height: 40px;
+          }  
+        }
+      }
+    }
+    .right{
+      @include column(6);
+      @include padding-leader;
+      @include padding-trailer(2.5);
+      font-family: "Raleway2";
+      padding-left: 40px;
+      padding-right: 40px;
+      background-color: $orange;
+      border-bottom: 3px $olive solid;
+      color: white;
+      p {
+        text-indent:  36px;
+        line-height: 1.6em;
+      }
+    }
+  } 
+  .angels { 
+    @include block-grid(3,4px,4px); 
+    li {
+      .block_angels {
+        @include adjust-font-size-to($content-font-size, 1.2);  
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $olive;
+        height: 315px;
+        white-space: normal;
+        &.tyrion {
+          background-image: image-url("angels2.png");
+          border-bottom: 3px $orange solid;
+          .biographya {display: none;} 
+          &:hover {
+            .biographya{  
+              background-color: $olive;
+              border-bottom: 3px $orange solid;
+              display: block;
+              height: 277px;  
+              padding-left: 45px;
+              padding-right: 45px;
+              @include padding-leader(0.7);
+              @include padding-trailer(0.7);
+              &.r { margin-left: -4px; }
+              &.l { margin-right: -4px; }
+            }
+          }             
+        }
+        &.jon {
+          background-image: image-url("angels3.png");
+          border-left: 3px $orange solid;
+          .biographya { display: none; }
+          &:hover {
+            .biographya {
+              background-color: $olive;
+              display: block;
+              margin-left: -3px;
+              height: 295px;
+              padding-left: 45px;
+              padding-right: 45px;
+              @include padding-leader(0.7);
+              @include padding-trailer(0.7);
+              border-left: 3px $orange solid;
+              &.t {padding-bottom: 7px;}
+              &.b {
+                margin-top: -11px;
+                padding-top: 7px;
+              }
+            }
+          }
+        }
+        &.daenerys {
+          background-image: image-url("angels1.png");
+          border-bottom: 3px $orange solid;
+          @include box-sizing(border-box);
+          .biographya {display: none;}
+          &:hover {
+            .biographya {
+              background-color: $olive;
+              border-bottom: 3px $orange solid;
+              display: block;
+              height: 274px;  
+              padding-left: 45px;
+              padding-right: 45px;
+              @include padding-leader(0.7);
+              @include padding-trailer(0.7);
+              &.r { margin-left: -4px; }
+              &.l { margin-right: -4px; }
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+
+#course.angels{
+  .line{@include margin-leader(4);}
+}

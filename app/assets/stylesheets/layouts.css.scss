@@ -1,0 +1,57 @@
+body {
+  background-color: $background;
+  width: 100%;
+  font-family: "Raleway1", "Helvetica Neue", Arial, sans-serif;
+}
+
+header {
+  background-color: $violet;
+  border-bottom: 3px $orange solid;
+  .wrapper {
+    @include outerRow;
+  }
+}
+
+#small-logo {
+  @include column(5);
+  .img {
+    background-image: image-url("logo-small.png");
+    width: 195px;
+    height: 41px;
+    margin: 10px 0 6px;
+  }
+}
+
+#menu {
+  @include column(7);
+}
+
+#content {
+  background-image: image-url("back.png");
+  background-repeat: no-repeat; 
+  background-size: 100%;
+  overflow: hidden;
+  padding-right: 30px; 
+}
+
+footer{
+  @include pie-clearfix;
+  @include padding-trailer;
+  @include padding-leader;
+  @include margin-leader(2);
+  background-color: $olive;
+  border-top: 3px $orange solid;
+  color: white;
+  font-family: "Raleway3";
+  @include adjust-font-size-to($footer-font-size);
+  #contact{
+    @include column(6);
+      text-align: left;
+      padding-left: 10px;
+    }
+  #RG{
+    @include column(6);
+      text-align: right;
+      padding-right: 10px;
+  }
+}
